@@ -20,6 +20,7 @@ export default function Home() {
       <OurTeam />
       <Testimonial />
       <OurClients />
+      <h1 className="text-4xl">Assalamualaikum</h1>
     </div>
   );
 }

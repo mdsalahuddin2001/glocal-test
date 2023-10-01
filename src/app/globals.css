@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: 0px;
+}
+
+@layer components {
+  .list-bullet {
+    @apply relative  before:h-[11px] before:w-[11px] before:rounded-full before:bg-secondary before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 pl-[21px];
+  }
+  .title-header {
+    @apply text-center text-2xl md:text-3xl lg:text-5xl text-[#FFF] font-GtExtraBold  font-black leading-normal mt-7 md:mt-[50px];
+  }
+  .explore-title {
+    @apply text-center text-[18px]  font-semibold leading-normal tracking-[0.99px] text-[#38E54D] pt-7 xl:pt-[81px];
+  }
+  .about-title {
+    @apply text-[#ADE3BF]  font-GtBold md:font-GtExtraBold font-normal text-center md:font-black   leading-normal text-3xl md:text-[48px];
+  }
+  .glocal-title {
+    @apply text-[#FFBB6B] leading-[46.325px] font-bold font-GtBold text-[20px] md:text-[24px] p-1;
+  }
+  .about-pera {
+    @apply text-[#FFF]  text-[16px] md:leading-[38.605px] font-normal;
+  }
+  .about-degree {
+    @apply text-[#FFBB6B] md:leading-[193.023%] font-GtBold text-[16px] md:text-[24px]  font-bold p-1;
+  }
+  .services-title {
+    @apply text-3xl md:text-[48px] py-12 md:py-[85px] font-GtBold md:font-GtExtraBold font-normal md:font-black text-center text-primary leading-normal;
+  }
+
+  .section-title {
+    @apply text-center text-[2rem] md:text-[2.5rem]  xl:text-[48px] text-primary md:font-GtExtraBold  text-3xl font-normal md:font-black leading-normal;
+  }
+}
+
+nav.sticky {
+  @apply bg-navbar z-[999] backdrop-blur-sm fixed mt-0;
+  animation: navStickyFade 0.4s linear;
+}
+
+nav.sticky .nav-content {
+  @apply justify-between;
+}
+
+nav.sticky .nav-content .logo {
+  @apply md:block;
+}
+nav.sticky .aboutDropdownContent {
+  @apply bg-white shadow-2xl;
+}
+/* keyframe animation */
+@keyframes navStickyFade {
+  from {
+    opacity: 1;
+    transform: translateY(-110%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* keyframe animation */
+@keyframes navAppear {
+  from {
+    opacity: 1;
+    transform: translateY(-110%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.navbar-appear {
+  animation: navAppear 0.4s linear;
+}
+
+.testimonialSlider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply !bg-primary;
+}
+
+section#our-team {
+  @apply !scroll-mt-[280px];
+}
+#Our-Philosophy {
+  @apply !scroll-mt-[100px];
+}
+section {
+  @apply scroll-mt-[113px];
+}
